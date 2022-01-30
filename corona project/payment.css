@@ -1,0 +1,53 @@
+
+
+ .inner-layer{
+    
+    background-image: url("l2.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+.container{
+    text-align:center;
+    padding: 10%;
+    color: #111;
+    background: transparent;
+    background-color: rgba(34, 31, 31, 0.411);
+    }
+h5{
+     font-size: x-large;
+    text-align: center;
+    color:rgba(243, 241, 241, 0.911);
+    font-weight: 700;
+
+}
+.btn-primary{
+    width: 65%;
+    
+    
+}
+h1 {
+    color: rgba(255, 255, 255, 0.952);
+    font-weight: 800%;
+    text-transform: uppercase;
+    margin-top: 10%;
+
+    
+    
+}
+h2{
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: bolder;
+    
+}
+
+p{
+    
+    font-size: x-large;
+    text-align: center;
+    color:rgba(243, 241, 241, 0.911);
+    font-weight: 600;
+}

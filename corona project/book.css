@@ -1,0 +1,92 @@
+body{
+    
+    overflow: hidden;
+
+      
+ }
+ .inner-layer{
+    
+    background-image: url("l2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+}
+
+.container{
+    text-align:center;
+    padding: 10%;
+    color: #111;
+    background: transparent;
+    background-color: rgba(34, 31, 31, 0.411);
+    
+    
+
+}
+.btn-primary{
+    width: 25%;
+    
+    
+}
+.far{
+    color: white;
+    
+    
+}
+.fas{
+    color: white;
+    margin-bottom: 7px;
+
+}
+h1 {
+    color: rgba(255, 255, 255, 0.952);
+    font-weight: 800%;
+    text-transform: uppercase;
+    
+    
+    
+}
+h5{
+    color: rgba(255, 255, 255, 0.952);
+
+}
+h2{
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: bolder;
+    /* letter-spacing: ; */
+    
+}
+h4{
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: bolder;
+    
+
+}
+.box{
+    width: 35%;
+    margin-bottom: 3px;
+    margin-top: 1px;
+    height: 40px;
+
+}
+p{
+    
+    font-size: x-large;
+    text-align: center;
+    color:rgba(243, 241, 241, 0.911);
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+    
+
+     
+    
+     
+
+    
+
+
+

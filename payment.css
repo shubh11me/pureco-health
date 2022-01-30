@@ -1,0 +1,80 @@
+body{
+    background-image: url("k5.jpg");
+    background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+      backdrop-filter:blur(0px) ;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+     
+     }
+.container{
+    text-align: center;
+    margin-top: 25%;
+     padding: 130px;
+    color: #111;
+    width: 900px;
+    padding-bottom: 100px;
+     background: transparent;
+    background-color: rgba(117, 186, 226, 0.76);
+    transform: translate(-50%,-50%);
+    margin-left: 50%;
+    border-radius: 10px;
+    background-position: center;
+
+    
+    /*color:rgba(89, 161, 255, 0.911);*/
+
+
+}
+h5{
+     font-size: x-large;
+    text-align: center;
+    color:rgba(243, 241, 241, 0.911);
+    font-weight: 700;
+    /*color:rgba(89, 161, 255, 0.911);*/
+
+}
+h6{
+        text-align: center;
+    color:rgba(243, 241, 241, 0.911);
+    font-weight: 700;
+    /*color:rgba(89, 161, 255, 0.911);*/
+
+}
+.btn-primary{
+    width: 55%;
+    
+    
+}
+h1 {
+    color: rgba(255, 255, 255, 0.952);
+    font-weight: 800%;
+    text-transform: uppercase;
+    
+    /*color:rgba(89, 161, 255, 0.911);*/
+
+}
+h2{
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: bolder;
+    /*color:rgba(89, 161, 255, 0.911);*/
+
+}
+.box{
+    width: 45%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    height: 40px;
+
+}
+p{
+    
+    font-size: x-large;
+    text-align: center;
+    color:rgba(243, 241, 241, 0.911);
+    font-weight: 600;    /*color:rgba(89, 161, 255, 0.911);*/
+
+}

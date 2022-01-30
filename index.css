@@ -1,0 +1,111 @@
+
+html,body{
+scroll-behavior: smooth;
+}
+.inner-layer{
+    
+    width:100%;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 170px;
+    background-image: url("k5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+.form-data{
+    margin-top: 15%;
+    background-color:rgba(155, 234, 240, 0.11);
+    padding-left: 6px;
+    padding-right: 5px;
+    border-radius: 35px;
+    box-shadow: 0 25px 45px (0,0,0,0.1);
+    border: 1px solid (255,255,255,0.25);
+    backdrop-filter: blur(90px);
+    overflow: hidden;
+    background-image: url("l.JPG");
+}
+h6{
+    color: whitesmoke;
+}
+
+.no-margin{
+    margin: 0px;
+
+}
+.form-body{
+    padding: 30px;
+    
+
+
+    
+
+    
+}
+
+    
+
+.form-head{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+}
+.form-head h2{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+    
+}
+
+.form-row{
+    margin-bottom: 15px;
+    margin-top: 10px; 
+    
+
+}
+.form-control{
+    background-color: #f7f7ff;
+
+
+}
+.form-control:hover{
+    box-shadow: none;
+    
+
+}
+.btn-primary{
+    background-color:  #2b5e66;
+    border-color:  #138496;
+    border-radius: 10px;
+
+
+}
+.content{
+    margin-top: 15%;
+    text-align: center;
+    color:#fff;
+    padding: 30px;
+}
+.content h1{
+font-weight: 650;
+font-size: 3.7rem;
+margin-top: 70px;
+
+}
+.content p{
+    font-size: 18px;
+}
+h2{
+    color:black ;
+    font-style: oblique;
+}
+
+nav ul li a{
+    font-size: larger;
+}
+
+
+    
