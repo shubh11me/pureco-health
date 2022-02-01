@@ -5,9 +5,9 @@ if (!isset($_SESSION['admin_login'])) {
     echo "<script>window.location.href='login.php'</script>";
 } else {
     $apoint = mysqli_query($conn, "SELECT * FROM appointments");
-    $apoint_booked= mysqli_query($conn, "SELECT * FROM appointments WHERE apt_status='Booked'");
-    $apoint_apr= mysqli_query($conn, "SELECT * FROM appointments WHERE apt_status='Approve'");
-    $apoint_done= mysqli_query($conn, "SELECT * FROM appointments WHERE apt_status='Done'");
+    $apoint_booked = mysqli_query($conn, "SELECT * FROM appointments WHERE apt_status='Booked'");
+    $apoint_apr = mysqli_query($conn, "SELECT * FROM appointments WHERE apt_status='Approve'");
+    $apoint_done = mysqli_query($conn, "SELECT * FROM appointments WHERE apt_status='Done'");
 }
 ?>
 <!doctype html>
@@ -53,7 +53,7 @@ if (!isset($_SESSION['admin_login'])) {
     </nav>
 
     <h2 class="text-center">
-       All Appointements
+        All Appointements
     </h2>
     <br>
     <table class="table table-primary table-hover">
@@ -72,6 +72,7 @@ if (!isset($_SESSION['admin_login'])) {
                 <th scope="col">payment_amount</th>
                 <th scope="col">payment_id</th>
                 <th scope="col">aapt_by</th>
+                <th scope="col">View Document</th>
                 <th scope="col">Appointment Status</th>
             </tr>
         </thead>
@@ -95,6 +96,7 @@ if (!isset($_SESSION['admin_login'])) {
                     <td><?php echo $row['payment_amount'] ?></td>
                     <td><?php echo $row['payment_id'] ?></td>
                     <td><?php echo $row['aapt_by'] ?></td>
+                    <td><a class="btn btn-warning" style="color:#fff;font-weight:bold" href="../process/<?php echo $row['id_proof'] ?>" target="_blank">Verify doc</a></td>
 
                     <td><select onChange="update_status(this.value,'<?php echo $row['appointment_id'] ?>')" class="form-control" id="exampleFormControlSelect1">
                             <option value="Requested" <?php echo $row['apt_status'] == 'Requested' ? 'selected' : '' ?>>Requested</option>
@@ -135,6 +137,8 @@ if (!isset($_SESSION['admin_login'])) {
                 <th scope="col">payment_amount</th>
                 <th scope="col">payment_id</th>
                 <th scope="col">aapt_by</th>
+                <th scope="col">View Document</th>
+
                 <th scope="col">Appointment Status</th>
             </tr>
         </thead>
@@ -158,6 +162,7 @@ if (!isset($_SESSION['admin_login'])) {
                     <td><?php echo $row['payment_amount'] ?></td>
                     <td><?php echo $row['payment_id'] ?></td>
                     <td><?php echo $row['aapt_by'] ?></td>
+                    <td><a class="btn btn-warning" style="color:#fff;font-weight:bold" href="../process/<?php echo $row['id_proof'] ?>" target="_blank">Verify doc</a></td>
 
                     <td><select onChange="update_status(this.value,'<?php echo $row['appointment_id'] ?>')" class="form-control" id="exampleFormControlSelect1">
                             <option value="Requested" <?php echo $row['apt_status'] == 'Requested' ? 'selected' : '' ?>>Requested</option>
@@ -198,6 +203,8 @@ if (!isset($_SESSION['admin_login'])) {
                 <th scope="col">payment_amount</th>
                 <th scope="col">payment_id</th>
                 <th scope="col">aapt_by</th>
+                <th scope="col">View Document</th>
+
                 <th scope="col">Appointment Status</th>
             </tr>
         </thead>
@@ -221,6 +228,7 @@ if (!isset($_SESSION['admin_login'])) {
                     <td><?php echo $row['payment_amount'] ?></td>
                     <td><?php echo $row['payment_id'] ?></td>
                     <td><?php echo $row['aapt_by'] ?></td>
+                    <td><a class="btn btn-warning" style="color:#fff;font-weight:bold" href="../process/<?php echo $row['id_proof'] ?>" target="_blank">Verify doc</a></td>
 
                     <td><select onChange="update_status(this.value,'<?php echo $row['appointment_id'] ?>')" class="form-control" id="exampleFormControlSelect1">
                             <option value="Requested" <?php echo $row['apt_status'] == 'Requested' ? 'selected' : '' ?>>Requested</option>
@@ -261,6 +269,8 @@ if (!isset($_SESSION['admin_login'])) {
                 <th scope="col">payment_amount</th>
                 <th scope="col">payment_id</th>
                 <th scope="col">aapt_by</th>
+                <th scope="col">View Document</th>
+
                 <th scope="col">Appointment Status</th>
             </tr>
         </thead>
@@ -284,6 +294,7 @@ if (!isset($_SESSION['admin_login'])) {
                     <td><?php echo $row['payment_amount'] ?></td>
                     <td><?php echo $row['payment_id'] ?></td>
                     <td><?php echo $row['aapt_by'] ?></td>
+                    <td><a class="btn btn-warning" style="color:#fff;font-weight:bold" href="../process/<?php echo $row['id_proof'] ?>" target="_blank">Verify doc</a></td>
 
                     <td><select onChange="update_status(this.value,'<?php echo $row['appointment_id'] ?>')" class="form-control" id="exampleFormControlSelect1">
                             <option value="Requested" <?php echo $row['apt_status'] == 'Requested' ? 'selected' : '' ?>>Requested</option>
@@ -303,21 +314,21 @@ if (!isset($_SESSION['admin_login'])) {
         </tbody>
     </table>
     <script>
-       function update_status(s,id) {
-           let mydata=JSON.stringify({
-               value:s,
-               apt_id:id
-           })
-        $.ajax({
-              type: "POST",
-              url: "../process/update_status.php",
-              data: mydata,
-              success: function(result) {
-                if (JSON.parse(result).status) {          
-                 alert('Status updated');
-                 window.location.reload();
+        function update_status(s, id) {
+            let mydata = JSON.stringify({
+                value: s,
+                apt_id: id
+            })
+            $.ajax({
+                type: "POST",
+                url: "../process/update_status.php",
+                data: mydata,
+                success: function(result) {
+                    if (JSON.parse(result).status) {
+                        alert('Status updated');
+                        window.location.reload();
+                    }
                 }
-              }
             });
         }
     </script>

@@ -100,7 +100,7 @@ margin-top: 70px;
 }
 h2{
     color:black ;
-    font-style: oblique;
+    /* font-style: oblique; */
 }
 
 nav ul li a{

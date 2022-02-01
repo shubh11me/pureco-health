@@ -6,7 +6,7 @@ $html='<!DOCTYPE html>
 <body>
 <h4>Hello '.$sname.', Your appointment is recieved Please complete the payment by clicking the link below.</h4>
 <h3>Note:-The Appointment will be not completed until the completion of your payment</h3>
-<a href="http://localhost/PracticeProjects/pureco%20health/payment.php?apt_id='.$aptid.'">Click to complete the payment</a>
+<a href="https://purecohealthcare.com//payment.php?apt_id='.$aptid.'">Click to complete the payment</a>
 <h6>Thanks,<br>
 Regards,<br>
 Pureco Heath Care Services.

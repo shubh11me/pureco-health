@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Table</title>
+	<title>Status-Pureco Healthcare Services</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS -->
@@ -22,7 +22,7 @@ include './process/conn.php';
 	<form method="get">
 		<h2>Please Enter Your Phone Number to check your appointment status</h2>
 		<div class="row form-row">
-			<label style="font-weight:bolder;font-size:xx-large;color:#fff;" for="num">Enter your phone number</label>
+			<label class="text-center" style="font-weight:bolder;color:#fff;" for="num">Enter your phone number</label>
 			<input type="number" id="num" name="phone" required class="form-control" placeholder="Enter Your Number">
 		</div>
 		<div class="row">

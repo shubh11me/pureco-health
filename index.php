@@ -53,7 +53,7 @@ include './process/conn.php';
 
         </div>
         <div class="col-sm-5">
-          <div class="form-data"  id="div_main">
+          <div class="form-data" id="div_main">
             <div class="form-head">
               <h2>Pureco Healthcare Services<br> Schedule Appointment</h2>
 
@@ -79,7 +79,9 @@ include './process/conn.php';
                 <div class="row form-row">
                   <div class="col-md-6 col-sm-12">
 
-                    <input type="text" name="city" class="form-control" id="city" required placeholder="Select City" required />
+                    <select class="form-control" required name="city" id="city" >
+                      <option>Solapur</option>            
+                    </select>
                   </div><br>
                   <div class="col-md-6 col-sm-12">
                     <input type="file" name="file" onchange="getFile(this)" required class="custom-file-input" id="file">

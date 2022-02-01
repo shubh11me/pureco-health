@@ -52,7 +52,7 @@ $email=$row_apt['email'];
         <h5>Apt No: <?php echo $row_apt['appointment_id']; ?> ,Name:<?php echo $row_apt['name']; ?>, Email: <?php echo $row_apt['email']; ?>, Mobile No: <?php echo $row_apt['mob_no']; ?></h5>
         <h6>Test Name: <?php echo $row_apt['test_name']; ?> AND Amount:Rs.<?php echo $row_apt['tast_amount']; ?></h6>
         <h5>Total Amount to pay : <?php echo "Rs." . $row_apt['tast_amount'] * $row_apt['no_of_peop']; ?></h5>
-        <button class="btn btn-primary" type="button" onclick="payNow()">PAYMENT METHOD</button>
+        <button class="btn btn-primary" id="pat_btn" type="button" onclick="payNow()">PAYMENT METHOD</button>
 
 
       </div>
@@ -65,7 +65,7 @@ $email=$row_apt['email'];
     let email = "<?php echo $email; ?>";
     console.log(email);
     function payNow() {
- 
+  $('#pat_btn').attr('disabled', 'disabled');
       var options = {
         
         
@@ -97,6 +97,12 @@ $email=$row_apt['email'];
                   console.log("payment complete");
                   window.location.href = `thanks.php?pay_id=${response.razorpay_payment_id}`;
                 }
+                $('#pat_btn').attr('disabled', 'false');
+
+              },
+              error: function(error){
+                $('#pat_btn').attr('disabled', 'false');
+
               }
             });
           }

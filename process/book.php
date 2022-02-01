@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
 
                         //    mysqli_query($con,$query);
                         // echo "INSERT INTO `appointments` (`name`, `email`, `city`,`apt_date`, `address`, `id_proof`,`test`, `mob_no`, `aapt_by`) VALUES ( '$sname', '$email', '$city','$apt_date', '$add','$target_file', '$test', '$mnum','SELF');";
-                        $insert = mysqli_query($conn, "INSERT INTO `appointments` (`name`, `email`, `city`,`apt_date`, `address`, `id_proof`,`test`,`no_of_peop`, `mob_no`, `aapt_by`, `apt_status`) VALUES ( '$sname', '$email', '$city','$apt_date', '$add','$target_dir.$name.$extension', '$test','$nos', '$mnum','SELF','Requested');");
+                        $insert = mysqli_query($conn, "INSERT INTO `appointments` (`name`, `email`, `city`,`apt_date`, `address`, `id_proof`,`test`,`no_of_peop`, `mob_no`, `aapt_by`, `apt_status`) VALUES ( '$sname', '$email', '$city','$apt_date', '$add','".$target_dir.$name.'.'.$extension."', '$test','$nos', '$mnum','SELF','Requested');");
                         //   echo  "INSERT INTO `appointments` (`name`, `email`, `city`, `address`, `id_proof`,`test`, `mob_no`, `aapt_by`) VALUES ( '$sname', '$email', '$city', '$add','$target_file', '$test', '$mnum','SELF');";
                         if ($insert) {
                             $lastid = mysqli_insert_id($conn);
