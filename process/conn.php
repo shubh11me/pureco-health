@@ -8,4 +8,5 @@ function alerter($sc){
 function alert($sc){
     echo "<script>alert('$sc')</script>";
 }
+
 ?>
